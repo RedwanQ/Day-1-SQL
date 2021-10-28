@@ -1,0 +1,58 @@
+-- QUESTION 1
+SELECT * FROM actor 
+WHERE last_name LIKE 'Wahlberg'
+-- ANSWER: 2 actors
+
+-- QUESTION 2
+SELECT * FROM payment 
+WHERE amount BETWEEN 3.99 and 5.99
+-- ANSWER: 5607 
+
+-- QUESTION 3
+SELECT film_id, COUNT(*) FROM inventory
+GROUP BY film_id
+ORDER BY film_id DESC
+LIMIT 1
+-- ANSWER: FILM 1000, 8 TIMES
+
+-- QUESTION 4
+SELECT * FROM customer
+WHERE last_name LIKE 'William'
+-- ANSWER: 0
+
+-- QUESTION 5
+SELECT staff_id, COUNT(*) FROM rental
+GROUP BY staff_id
+ORDER BY staff_id DESC
+-- ANSWER: STAFF_ID 1 HAS 8040
+
+-- QUESTION 6
+SELECT COUNT (DISTINCT district)
+FROM address
+-- ANSWER: 378
+
+-- QUESTION 7
+SELECT film_id, COUNT(*) FROM film_actor
+GROUP BY film_id
+ORDER BY count DESC
+-- ANSWER: FILM 508 HAS THE MOST ACTORS WITH 15
+
+-- QUESTION 8
+SELECT first_name, last_name FROM customer
+WHERE last_name LIKE '%es%'
+-- ANSWER: 30 customers
+
+-- QUESTION 9
+SELECT * FROM payment
+WHERE amount BETWEEN 4.99 AND 5.99
+
+
+
+
+-- QUESTION 10
+SELECT DISTINCT rating FROM film 
+
+SELECT rating, COUNT(*) FROM film
+GROUP BY rating
+ORDER BY rating DESC
+-- ANSWER: 5 Rating Categories AND NC-17 has the most movies
